@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LAYA ABAYAS | أناقة تليق بك</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= TOP BAR ================= -->
+
+<div class="top-bar">
+    🎁 شحن مجاني للطلبات فوق 999 جنيه
+</div>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="header-container">
+
+        <button class="menu-button" onclick="toggleMenu()">
+            ☰
+        </button>
+
+        <div class="brand">
+            <span class="brand-name">LAYA</span>
+            <small>ABAYAS</small>
+        </div>
+
+        <nav class="desktop-menu">
+
+            <a href="#home" class="active">
+                الرئيسية
+            </a>
+
+            <a href="#products">
+                المتجر
+            </a>
+
+            <a href="#categories">
+                التصنيفات
+            </a>
+
+            <a href="#about">
+                من نحن
+            </a>
+
+            <a href="#contact">
+                تواصل معنا
+            </a>
+
+        </nav>
+
+        <div class="header-icons">
+
+            <button onclick="openSearch()">
+                🔍
+            </button>
+
+            <button>
+                👤
+            </button>
+
+            <button class="cart-button" onclick="openCart()">
+
+                🛍️
+
+                <span id="cartCount">
+                    0
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- MOBILE MENU -->
+
+    <div id="mobileMenu" class="mobile-menu">
+
+        <a href="#home" onclick="toggleMenu()">
+            الرئيسية
+        </a>
+
+        <a href="#products" onclick="toggleMenu()">
+            المتجر
+        </a>
+
+        <a href="#categories" onclick="toggleMenu()">
+            التصنيفات
+        </a>
+
+        <a href="#about" onclick="toggleMenu()">
+            من نحن
+        </a>
+
+        <a href="#contact" onclick="toggleMenu()">
+            تواصل معنا
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section id="home" class="hero">
+
+    <div id="heroImage" class="hero-image"></div>
+
+    <div class="hero-content">
+
+        <span class="hero-small">
+            L A Y A &nbsp; A B A Y A S
+        </span>
+
+        <h1 id="heroTitle">
+            أناقة تليق بك
+        </h1>
+
+        <p id="heroText">
+            تشكيلة فاخرة من العبايات
+            <br>
+            بتصاميم راقية وجودة عالية
+        </p>
+
+        <a href="#products" class="gold-button">
+            تسوقي الآن
+        </a>
+
+    </div>
+
+
+    <div class="slider-dots">
+
+        <button class="dot active" onclick="changeSlide(0)"></button>
+
+        <button class="dot" onclick="changeSlide(1)"></button>
+
+        <button class="dot" onclick="changeSlide(2)"></button>
+
+        <button class="dot" onclick="changeSlide(3)"></button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= BENEFITS ================= -->
+
+<section class="benefits">
+
+    <div class="benefit">
+
+        <span>♢</span>
+
+        <div>
+            <strong>جودة مضمونة</strong>
+            <small>
+                أعلى جودة للخامات والتفاصيل
+            </small>
+        </div>
+
+    </div>
+
+
+    <div class="benefit">
+
+        <span>▱</span>
+
+        <div>
+            <strong>شحن سريع</strong>
+            <small>
+                توصيل سريع لكل المحافظات
+            </small>
+        </div>
+
+    </div>
+
+
+    <div class="benefit">
+
+        <span>⟳</span>
+
+        <div>
+            <strong>إرجاع سهل</strong>
+            <small>
+                إرجاع واستبدال خلال 14 يوم
+            </small>
+        </div>
+
+    </div>
+
+
+    <div class="benefit">
+
+        <span>♙</span>
+
+        <div>
+            <strong>دفع آمن</strong>
+            <small>
+                جميع طرق الدفع مضمونة
+            </small>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section id="products" class="products-section">
+
+    <div class="section-title">
+
+        <span></span>
+
+        <h2>
+            وصل حديثاً
+        </h2>
+
+        <span></span>
+
+    </div>
+
+
+    <div id="productGrid" class="products-grid">
+    </div>
+
+
+    <button class="outline-button" onclick="showAllProducts()">
+        عرض جميع المنتجات
+    </button>
+
+</section>
+
+
+
+<!-- ================= CATEGORIES ================= -->
+
+<section id="categories" class="categories">
+
+    <div class="section-title">
+
+        <span></span>
+
+        <h2>
+            تسوقي حسب التصنيف
+        </h2>
+
+        <span></span>
+
+    </div>
+
+
+    <div class="category-grid">
+
+        <button onclick="filterProducts('فخمة')">
+
+            <div class="category-image category-one"></div>
+
+            <strong>
+                عبايات فخمة
+            </strong>
+
+        </button>
+
+
+        <button onclick="filterProducts('يومية')">
+
+            <div class="category-image category-two"></div>
+
+            <strong>
+                عبايات يومية
+            </strong>
+
+        </button>
+
+
+        <button onclick="filterProducts('مناسبات')">
+
+            <div class="category-image category-three"></div>
+
+            <strong>
+                عبايات مناسبات
+            </strong>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="about">
+
+    <div class="about-text">
+
+        <span class="hero-small">
+            L A Y A
+        </span>
+
+        <h2>
+            تفاصيل تصنع الفرق
+        </h2>
+
+        <p>
+            في LAYA نصمم العباية لتكون امتداداً لأناقتك،
+            بقصّات راقية وخامات مختارة بعناية وتفاصيل
+            مستوحاة من الذوق العربي العصري.
+        </p>
+
+        <a href="#contact" class="gold-button">
+            اكتشفي قصتنا
+        </a>
+
+    </div>
+
+
+    <div class="about-card">
+
+        <span>
+            LAYA
+        </span>
+
+        <small>
+            Elegance in every detail
+        </small>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer id="contact">
+
+    <div class="footer-grid">
+
+        <div>
+
+            <h3>
+                LAYA ABAYAS
+            </h3>
+
+            <p>
+                تصاميم عصرية تناسب ذوقك وتمنحك
+                إطلالة استثنائية.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                روابط سريعة
+            </h4>
+
+            <a href="#products">
+                المتجر
+            </a>
+
+            <a href="#categories">
+                التصنيفات
+            </a>
+
+            <a href="#about">
+                من نحن
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                خدمة العملاء
+            </h4>
+
+            <a href="#">
+                سياسة الاستبدال
+            </a>
+
+            <a href="#">
+                الشحن والتوصيل
+            </a>
+
+            <a href="#">
+                الأسئلة الشائعة
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                تواصلي معنا
+            </h4>
+
+            <p>
+                واتساب: 01000000000
+            </p>
+
+            <p>
+                يومياً من 10 ص إلى 10 م
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+        © 2026 LAYA ABAYAS — جميع الحقوق محفوظة
+    </div>
+
+</footer>
+
+
+
+<!-- ================= WHATSAPP ================= -->
+
+<button class="whatsapp" onclick="openWhatsApp()">
+    ☎️
+    </button>
+
+
+
+<!-- ================= SEARCH MODAL ================= -->
+
+<div id="searchModal" class="modal">
+
+    <div class="modal-box">
+
+        <button class="close-button" onclick="closeSearch()">
+            ×
+        </button>
+
+        <h3>
+            ابحثي عن عبايتك
+        </h3>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="اكتبي اسم المنتج..."
+            oninput="searchProducts()"
+        >
+
+        <div id="searchResults"></div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= CART MODAL ================= -->
+
+<div id="cartModal" class="modal">
+
+    <div class="modal-box">
+
+        <button class="close-button" onclick="closeCart()">
+            ×
+        </button>
+
+        <h3>
+            سلة التسوق
+        </h3>
+
+        <div id="cartItems">
+        </div>
+
+        <div class="cart-total">
+
+            <span>
+                الإجمالي
+            </span>
+
+            <strong id="cartTotal">
+                0 جنيه
+            </strong>
+
+        </div>
+
+        <button class="gold-button full-button" onclick="checkout()">
+            إتمام الطلب عبر واتساب
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
